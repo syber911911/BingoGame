@@ -20,7 +20,6 @@ public class ButtonsEvent implements ActionListener {
 	
 	public static JFrame EndFrame;
 	private static MyButton[] Buttons;
-	private static JLabel EndMessage;
 	
 	private static int index; // Button�쓽 index �몴�쁽. 0 - 15
 	private static int openCount = 0; //�쁽�옱源뚯� �늻瑜� Button �닔.  0 - 2
@@ -76,11 +75,6 @@ public class ButtonsEvent implements ActionListener {
 					
 					JPanel EndNorth = new JPanel();  //EndNorth Panel�쓣 �깮�꽦.
 					JPanel EndSouth = new JPanel(); //EndSouth Panel�쓣 �깮�꽦.
-					EndMessage = new JLabel("Success " + UserNameEvent.getUserName() +" Score: " + getTryCount()); //EndMessage Label�뿉 �빐�떦 臾몄옄�뿴�쓣 ���옣.
-					Rank rank = new Rank();
-					rank.runRank(UserNameEvent.getName(), getTryCount());
-					EndMessage.setForeground(Color.RED); //EndMessage�쓽 �깋�쓣 吏��젙.
-					EndNorth.add(EndMessage); //EndNorth�뿉 EndMessage 異붽�.
 					EndFrame.add(EndNorth, BorderLayout.NORTH); //EndFrame�쓽 �긽�떒�뿉 EndNorth 異붽�.
 					MyButton RestartButton = new MyButton(); //RestartButton �깮�꽦.
 					MyButton ExitButton = new MyButton(); //ExitButton �깮�꽦.
@@ -198,14 +192,4 @@ public class ButtonsEvent implements ActionListener {
 	public static void setTryCount(int tryCount) {
 		ButtonsEvent.tryCount = tryCount;
 	}
-
-	public static JLabel getEndMessage() {
-		return EndMessage;
-	}
-
-	public static void setEndMessage(JLabel endMessage) {
-		EndMessage = endMessage;
-	}
-	
-
 }

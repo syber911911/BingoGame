@@ -20,7 +20,6 @@ public class MainFrame extends JFrame{ //게임 시작 시 보이는 첫 화면
 	
 	private static JLabel Message = new JLabel(" Try Count:  0 ");
 	private static JTextField UserName;
-	private UserNameEvent Name;
 	private MyButton ExitButton;
 	private ExitEvent Exit;
 	private JPanel NorthPanel;
@@ -41,8 +40,6 @@ public class MainFrame extends JFrame{ //게임 시작 시 보이는 첫 화면
 		getUserName().setBackground(new Color(159, 97, 49)); //JTextField의 배경색을 지정.
 		getUserName().setForeground(Color.WHITE); //JTextField의 글자색을 지정.
 		getUserName().setBorder(null); //JTextField의 테두리 제거.
-		Name = new UserNameEvent(); //UserNameEvent 객체 생성.
-		getUserName().addActionListener(Name); //ActionListener UserNameEvent를 UserName에 추가.
 		
 		ExitButton = new MyButton(); //Exit 버튼 생성. 
 		ExitButton.setText("Exit"); //Exit 버튼의 Text지정 .

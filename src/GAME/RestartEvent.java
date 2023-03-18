@@ -20,7 +20,6 @@ public class RestartEvent implements ActionListener{
 		ButtonsEvent.setButtonIndexFirstSave(0);
 		ButtonsEvent.setButtonIndexSecondSave(0);
 		ButtonsEvent.EndFrame.setVisible(false); //EndFrame을 보이지 않도록 함.
-		UserNameEvent.resetUserName(); //입력되어 있는 Username을 reset.
 		MainFrame.getMessage().setText(" Try Count : 0"); //Message를 초기화.
 		MainFrame.getUserName().setText("User Name: "); //UserName TextFeild를 초기화.
 	}
